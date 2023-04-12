@@ -13,7 +13,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 
-import com.example.vinstallment.MainActivity;
+import com.example.vinstallment.Activity.MainActivity;
 import com.example.vinstallment.R;
 
 public class NotificationReminder {
@@ -29,7 +29,7 @@ public class NotificationReminder {
         PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intent, PendingIntent.FLAG_IMMUTABLE);
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context, CHANNEL_ID)
-                .setSmallIcon(R.drawable.ic_launcher_background)
+                .setSmallIcon(R.drawable.ic_logo_vinstallment)
                 .setContentTitle("REMINDER")
                 .setContentText("Hari pembayaran sudah dekat, silahkan lakukan pembayaran cicilan anda")
                 .setPriority(NotificationCompat.PRIORITY_HIGH)
@@ -57,7 +57,7 @@ public class NotificationReminder {
         PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intent, PendingIntent.FLAG_IMMUTABLE);
 
         NotificationCompat.Builder notification = new NotificationCompat.Builder(context, CHANNEL_ID)
-                .setSmallIcon(R.drawable.ic_launcher_background)
+                .setSmallIcon(R.drawable.ic_logo_vinstallment)
                 .setContentTitle("REMINDER")
                 .setContentText("Hari pembayaran sudah dekat, silahkan lakukan pembayaran cicilan anda")
                 .setPriority(NotificationCompat.PRIORITY_HIGH)

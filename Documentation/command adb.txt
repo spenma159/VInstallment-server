@@ -1,0 +1,25 @@
+https://developer.android.com/studio/command-line/adb#IntentSpec
+
+Remove Device Owner
+adb shell dpm remove-active-admin com.example.vinstallment/.Receiver.DeviceAdminReceiver
+
+Set Device Owner / Cicilan Belum Lunas
+adb shell dpm set-device-owner com.example.vinstallment/.Receiver.DeviceAdminReceiver
+
+Reminder
+adb shell am broadcast -a com.example.vinstallment.Receiver.ReminderReceiver com.example.vinstallment
+
+H+1 Punishment
+adb shell am broadcast -a com.example.vinstallment.Receiver.OneDayAfterReceiver com.example.vinstallment
+
+H+2 Punishment
+adb shell am broadcast -a com.example.vinstallment.Receiver.TwoDayAfterReceiver com.example.vinstallment
+
+H+3 Punishment
+adb shell am broadcast -a com.example.vinstallment.Receiver.ThreeDayAfterReceiver com.example.vinstallment
+
+Clear Punishment
+adb shell am broadcast -a com.example.vinstallment.Receiver.ClearPunishmentReceiver com.example.vinstallment
+
+Cicilan Lunas
+adb shell am broadcast -a com.example.vinstallment.Receiver.CicilanLunasReceiver com.example.vinstallment

@@ -1,0 +1,5 @@
+{
+"android.app.extra.PROVISIONING_DEVICE_ADMIN_COMPONENT_NAME": "com.example.vinstallment/com.example.vinstallment.Receiver.DeviceAdminReceiver",
+"android.app.extra.PROVISIONING_DEVICE_ADMIN_SIGNATURE_CHECKSUM": "3E8GUeHwrPi6uS9ZmER2yTqpnbfh0N7irxIkB8Eq-bQ",
+"android.app.extra.PROVISIONING_DEVICE_ADMIN_PACKAGE_DOWNLOAD_LOCATION": "https://www.googleapis.com/drive/v3/files/1H_bbobhY_GrxdkwszDnIOeK34M3f2MS-?alt=media&key=AIzaSyAA9ERw-9LZVEohRYtCWka_TQc6oXmvcVU&supportsAllDrives=True"
+}

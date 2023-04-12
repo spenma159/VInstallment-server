@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="70dp">
+    <RelativeLayout
+        android:id="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+        <ImageView
+            android:id="@+id/img_logo"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/ic_logo_vinstallment"
+            android:contentDescription="Logo"
+            android:layout_centerHorizontal="true"/>
+        <TextView
+            android:id="@+id/text_app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VInstallment"
+            android:fontFamily="@font/roboto_bold"
+            android:layout_below="@+id/img_logo"
+            android:layout_centerHorizontal="true"/>
+        <TextView
+            android:id="@+id/text_company_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VST Company"
+            android:fontFamily="@font/roboto_bold"
+            android:layout_below="@+id/text_app_name"
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layout_top"
+        android:layout_marginTop="50dp">
+        <TextView
+            android:id="@+id/text_setup_device"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Set Up Device"
+            android:textSize="20sp"
+            android:fontFamily="@font/roboto_bold"/>
+        <TextView
+            android:id="@+id/text_des_setup"
+            android:layout_below="@+id/text_setup_device"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Device ini akan diproteksi oleh aplikasi VInstallment, detail mengenai cicilan dapat dilihat di dalam aplikasi VInstallment."/>
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/text_des_setup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hal yang dapat dilakukan oleh VInstallment adalah : \n 1. Memberikan reminder terhadap pengguna\n 2. Memberikan hukuman jika lewat jatuh tempo pembayaran"/>
+        <Button
+            android:id="@+id/btn_accept"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Accept"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/dark_blue"/>
+    </RelativeLayout>
+
+</RelativeLayout>

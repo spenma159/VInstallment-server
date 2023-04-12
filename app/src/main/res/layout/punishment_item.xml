@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="15dp"
+    android:layout_marginTop="15dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="17dp"
+        android:background="@color/dark_blue">
+        <TextView
+            android:id="@+id/id_punishment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="1"
+            android:textColor="@color/white"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="7dp"
+            android:textSize="23sp"
+            android:background="@drawable/background_ic_light_blue_grey_2"/>
+        <RelativeLayout
+            android:id="@+id/layout_text_punishment"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/id_punishment"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="17dp">
+            <TextView
+                android:id="@+id/text_title_punishment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hukuman terlambat bayar satu hari"
+                android:textSize="12sp"
+                android:fontFamily="@font/roboto_bold"
+                android:textColor="@color/white"/>
+            <TextView
+                android:id="@+id/text_description_punishment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hukuman ini akan memberikan notifikasi terhadap pengguna dan tidak bisa dihapus"
+                android:textSize="11sp"
+                android:fontFamily="@font/roboto_light"
+                android:textColor="@color/white"
+                android:layout_below="@id/text_title_punishment"/>
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/text_punishment_enabled"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Tidak Aktif"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:layout_toEndOf="@id/layout_text_punishment"
+            android:layout_marginStart="15dp"/>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

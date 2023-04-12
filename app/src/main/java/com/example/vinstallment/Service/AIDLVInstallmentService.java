@@ -129,6 +129,11 @@ public class AIDLVInstallmentService extends Service {
             }
         }
     };
+    public void reminderInstallment() throws RemoteException {
+        notificationReminder.reminderNotify();
+        Log.i(TAG, "Package Name : " + Arrays.toString(getAllApplication()));
+        Log.i(TAG, "Package Name : " + Arrays.toString(getCameraApp()));
+    }
     private String[] getAllApplication(){
 //        final PackageManager packageManager = getPackageManager();
 //        List<ApplicationInfo> installedApplications =

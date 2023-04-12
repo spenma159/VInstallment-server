@@ -3,7 +3,10 @@ package com.example.vinstallment.App;
 import android.app.Application;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
+import android.content.Intent;
 import android.os.Build;
+
+import androidx.core.app.NotificationManagerCompat;
 
 public class App extends Application {
     public static final String CHANNEL_ID = "channel_reminder";

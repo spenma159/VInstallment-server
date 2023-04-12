@@ -11,22 +11,34 @@
     <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"
         tools:ignore="QueryAllPackagesPermission" />
     <uses-permission android:name="android.permission.MANAGE_DEVICE_POLICY_SUPPORT_MESSAGE"/>
+    <uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES" />
     <application
         android:name=".App.App"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/ic_logo_vinstallment"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.VInstallment"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".Activity.MainActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activity.GetProvisioningModeActivity"
+            android:exported="true"
+            android:permission="android.permission.BIND_DEVICE_ADMIN">
+            <intent-filter>
+                <action android:name="android.app.action.GET_PROVISIONING_MODE" />
+                <action android:name="android.app.action.ADMIN_POLICY_COMPLIANCE" />
+                <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
         <service
@@ -39,8 +51,10 @@
             </intent-filter>
         </service>
         <service
+            android:name=".Service.OneDayAfterService"
+            android:exported="false"/>
+        <service
             android:name=".Service.ThreeDaysAfterService"
-            android:enabled="true"
             android:exported="false"/>
         <receiver
             android:name=".Receiver.DeviceAdminReceiver"
@@ -59,6 +73,40 @@
                 <action android:name="android.app.action.DEVICE_OWNER_CHANGED"/>
             </intent-filter>
         </receiver>
+        <receiver android:name=".Receiver.ReminderReceiver" android:exported="true" android:enabled="true">
+            <intent-filter>
+                <action android:name="com.example.vinstallment.Receiver.ReminderReceiver"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".Receiver.OneDayAfterReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="com.example.vinstallment.Receiver.OneDayAfterReceiver"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".Receiver.TwoDayAfterReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="com.example.vinstallment.Receiver.TwoDayAfterReceiver"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".Receiver.ThreeDayAfterReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="com.example.vinstallment.Receiver.ThreeDayAfterReceiver"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".Receiver.ClearPunishmentReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="com.example.vinstallment.Receiver.ClearPunishmentReceiver"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".Receiver.CicilanLunasReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="com.example.vinstallment.Receiver.CicilanLunasReceiver"/>
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
